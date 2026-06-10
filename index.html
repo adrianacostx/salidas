@@ -6,6 +6,75 @@
     <title>salidas</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* Estilos base responsivos */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 95vw;
+  max-width: 400px;
+  min-height: 60vh;
+  padding: 1.2em;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.final-msg, .final-addr {
+  font-size: 1.1em;
+  text-align: center;
+  word-break: break-word;
+}
+
+.btn {
+  width: 100%;
+  font-size: 1.1em;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.gif-area img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto 0 auto;
+}
+
+/* Media query para móviles */
+@media (max-width: 600px) {
+  html, body {
+    font-size: 15px;
+  }
+  .card {
+    padding: 0.7em;
+    min-height: 50vh;
+    max-width: 98vw;
+  }
+  .final-msg, .final-addr {
+    font-size: 1em;
+  }
+  .btn {
+    font-size: 1em;
+    padding: 0.8em;
+  }
+}
+    </style>
 </head>
 <body>
 
