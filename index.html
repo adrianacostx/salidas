@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salidas</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <canvas id="matrix-canvas"></canvas>
+    <div class="scanlines"></div>
+    <footer class="footer">by <a href="https://github.com/adrianacostx" target="_blank" rel="noopener">adrianacostx</a></footer>
+    
+    <!-- Page 1: name lock -->
+    <section class="page active fade-in" id="page-lock">
+      <div class="card">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+    
+        <div class="lock-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="11" width="18" height="11" rx="3" ry="3"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+    
+        <h1>Esto se desbloquea<br>con tu nombre <span class="heart">❤</span></h1>
+        <p class="sub" style="margin-top:8px; margin-bottom:24px;"></p>
+    
+        <div class="name-input-wrap">
+          <input
+            class="name-input"
+            id="name-input"
+            type="text"
+            placeholder="escribe tu nombre..."
+            autocomplete="off"
+            onkeydown="if(event.key==='Enter') tryEnter()"
+          />
+          <div class="error-msg" id="error-msg">Este mensaje no es para ti.</div>
+        </div>
+    
+        <button class="btn" id="enter-btn" onclick="tryEnter()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+            <polyline points="10 17 15 12 10 7"/>
+            <line x1="15" y1="12" x2="3" y2="12"/>
+          </svg>
+          Entrar
+        </button>
+      </div>
+    </section>
+    
+    <!-- Page 2: activity roulette -->
+    <section class="page" id="page-roulette">
+      <div class="card fade-in">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+    
+        <div class="big-text">Feliz día <span class="heart">❤</span> y hoy haremos...</div>
+    
+        <div class="divider"></div>
+    
+        <div class="roulette-wrap">
+          <div class="roulette-window">
+            <div class="center-line-top"></div>
+            <div class="center-line-bottom"></div>
+            <div class="roulette-track" id="roulette-track"></div>
+          </div>
+          <div class="roulette-btn-row">
+            <button class="btn" id="spin-btn" onclick="spinRoulette()">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 4 23 10 17 10"/>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+              </svg>
+              girar
+            </button>
+            <button class="btn btn-accent" id="confirm-roulette-btn" onclick="confirmRoulette()" style="display:none">
+              elegir
+            </button>
+          </div>
+        </div>
+    
+        <div id="roulette-result" style="display:none">
+          <div class="result-badge" id="result-badge"></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Page 3: time picker -->
+    <section class="page" id="page-time">
+      <div class="card fade-in">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+    
+        <h1>¿A qué hora<br>puedo ver tu carita? <span class="heart">✦</span></h1>
+    
+        <div class="time-options" id="time-options"></div>
+    
+        <button class="btn btn-accent" id="confirm-time-btn" onclick="confirmTime()" disabled>
+          confirmar hora
+        </button>
+      </div>
+    </section>
+    
+    <!-- Page 4: final reveal -->
+    <section class="page" id="page-final">
+      <div class="card fade-in">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+    
+        <div class="final-msg">
+          ya eres hermosa,<br>
+          pero esta lista a las <span class="final-time" id="final-time-text">?</span>
+        </div>
+    
+        <div class="final-addr">
+          <span class="sym">📍dirección:</span> tu casa (pasaré por ti)
+        </div>
+    
+        <div class="gif-area">
+          <img src="assets/garu-pucca.gif" alt="❤" />
+        </div>
+      </div>
+    </section>
+    
+</body>
+<script src="./scripts.js"></script>
+</html>
