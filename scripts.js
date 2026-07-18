@@ -1,4 +1,4 @@
-const UNLOCK_NAME = 'liliana'; // expected input, lowercase
+const UNLOCK_NAME = 'lorena'; // expected input, lowercase
 
 // --- Matrix rain background ---
 (function () {
