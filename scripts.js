@@ -1,4 +1,4 @@
-const UNLOCK_NAME = 'lorena'; // expected input, lowercase
+const UNLOCK_NAME = ['lorena', 'estefania']; // expected input, lowercase
 
 // --- Matrix rain background ---
 (function () {
@@ -48,7 +48,7 @@ function tryEnter() {
   const errEl = document.getElementById('error-msg');
   const card = document.querySelector('#page-lock .card');
 
-  if (val === UNLOCK_NAME) {
+  if (UNLOCK_NAME.includes(val)) {
     errEl.classList.remove('show');
     goTo('page-roulette');
     buildRoulette();
