@@ -61,7 +61,7 @@ function tryEnter() {
 }
 
 // --- Roulette ---
-const OPTIONS = ['🎬  cine', '🍽  cena', '🏎  go karts', '🎨 ir a pintar', '🏐 jugar volleyball', '☕️ café', '🐾 ir al zoo', '🎭 museo', '🏡 ir a una cabaña', '📺 ver series', '🚶 hacer senderismo', '🕹jugar videojuegos', '🏊‍♀️ ir a nadar'];
+const OPTIONS = ['🎬  ir al cine', '🍽  ir a cenar', '🏎  ir a los go karts', '🎨 ir a pintar', '🏐 jugar volleyball', '☕️ por un café', '🐾 ir al zoo', '🎭 ir a un museo', '🏡 ir a una cabaña', '📺 ver series', '🚶 hacer senderismo', '🕹 jugar videojuegos', '🏊‍♀️ ir a nadar'];
 
 let rouletteResult = null;
 let spinning = false;
